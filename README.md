@@ -20,5 +20,5 @@ where 1=1
 and loaddate = '2022-02-08'
 and source = 'AGR'
 and exceptionkey like 'AGRCONTGAV%'
-and (positionlocation = 'flat' and positionsublocation = 'priced basis' and tradedate = loaddate and unsettledquantity = 0)
-and (positionlocation = 'spot contracts' and unsettledquantity = 0 and tradedate = loaddate)
+and not (positionlocation = 'flat' and positionsublocation = 'priced basis' and tradedate = loaddate and unsettledquantity = 0)
+and not (positionlocation = 'spot contracts' and unsettledquantity = 0 and tradedate = loaddate)
